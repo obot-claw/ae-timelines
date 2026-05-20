@@ -1,0 +1,35 @@
+{
+  "name": "ae-timelines",
+  "version": "2.1.6",
+  "description": "Adverse event timelines for clinical trials",
+  "main": "./aeTimelines.js",
+  "module": "./src/wrapper.js",
+  "author": "Rho, Inc.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RhoInc/ae-timelines.git"
+  },
+  "dependencies": {
+    "d3": "^3.5.14",
+    "webcharts": "^1.9.0"
+  },
+  "scripts": {
+    "build": "npm audit fix && npm run bundle && npm run format && npm run build-md",
+    "build-md": "node ./scripts/configuration-markdown.js",
+    "bundle": "rollup -c",
+    "format": "npm run format-src && npm run format-bundle",
+    "format-bundle": "prettier --print-width=100 --tab-width=4 --single-quote --write ./aeTimelines.js",
+    "format-src": "prettier --print-width=100 --tab-width=4 --single-quote --write \"./src/**/*.js\"",
+    "test-page": "start chrome ./test-page/index.html && start firefox ./test-page/index.html && start iexplore file://%CD%/test-page/index.html",
+    "watch": "rollup -c -w"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "prettier": "^1.7.4",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^3.0.2"
+  }
+}
