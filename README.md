@@ -50,3 +50,17 @@ The chart can be configured to facilitate non-standard data formats and to alter
 - [API](https://github.com/RhoInc/ae-timelines/wiki/API)
 - [Technical Documentation](https://github.com/RhoInc/ae-timelines/wiki/Technical-Documentation) 
 - [Data Guidelines](https://github.com/RhoInc/ae-timelines/wiki/Data-Guidelines)
+
+## P004 nextgen functional requirements status
+
+This section tracks the nextgen Chart.js spike against the legacy wiki requirements. The current spike is intentionally partial; unmet items become migration backlog before any replacement release.
+
+| Requirement area | Legacy requirement summary | Spike status |
+|---|---|---|
+| Serious event filter | Filter serious, non-serious, or all events; mark serious events visually. | Partial: serious-event filter implemented; serious-event visual marker still needs a richer encoding. |
+| Severity filter and legend | Filter by severity/intensity and color-code severity levels. | Partial: severity filter and color encoding implemented. |
+| Subject filter | Filter timeline to one subject or all subjects. | Implemented in spike. |
+| Configured filters | Support additional pre-selected data filters. | Partial: treatment-group filter added as representative configured filter. |
+| Subject sorting | Sort subject IDs. | Partial: ascending/descending subject sort implemented. |
+| Timeline rendering | Render AE start/end windows on study-day axis. | Partial: floating horizontal bars implemented with synthetic AE data. |
+| Regression coverage | Validate all filters, sort behavior, serious markers, and timeline rendering. | Not started; requires automated browser tests. |
